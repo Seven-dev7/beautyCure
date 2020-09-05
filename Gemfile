@@ -8,6 +8,10 @@ gem 'jquery-rails'
 gem 'bootstrap-sass'
 gem 'sprockets-rails', '~> 3.0', '>= 3.0.4'
 gem 'devise', '~> 4.7', '>= 4.7.2'
+
+# Forms
+gem 'simple_form', '~> 5.0', '>= 5.0.1'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 # Use postgresql as the database for Active Record
