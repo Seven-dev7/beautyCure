@@ -15,4 +15,8 @@ class LandingPageController < ApplicationController
     def store
         
     end
+
+    def reservation
+        
+    end
 end
