@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root 'landing_page#landing'
   get 'about', to: 'landing_page#about'
   get 'products', to: 'landing_page#products'
