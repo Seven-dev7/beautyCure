@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Order, type: :model do
   let(:order) { create(:order)}
     
-  it 'should create a valid WorkDay' do
+  it 'should create a valid Order' do
     expect(order).to be_valid
   end
   

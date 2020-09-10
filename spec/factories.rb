@@ -25,4 +25,8 @@ FactoryBot.define do
         total_price { (20..352).to_a.sample }
         association :user
     end
+    factory :order_item do
+        association :order
+        association :product
+    end
 end
