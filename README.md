@@ -3,6 +3,8 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
+rails db:migrate RAILS_ENV=test
+
 Things you may want to cover:
 
 * Ruby version
