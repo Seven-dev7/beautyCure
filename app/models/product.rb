@@ -1,4 +1,4 @@
 class Product < ApplicationRecord
 
-    has_many :card_items
+    has_many :cart_items
 end
