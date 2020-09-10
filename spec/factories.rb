@@ -29,4 +29,11 @@ FactoryBot.define do
         association :order
         association :product
     end
+    factory :cart do
+        association :user
+    end
+    factory :cart_item do
+        association :cart
+        association :product
+    end
 end
