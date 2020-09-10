@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2020_09_09_143905) do
 
   create_table "appointments", force: :cascade do |t|
     t.bigint "order_id"
+    t.bigint "user_id"
     t.bigint "employee_id"
     t.datetime "start"
     t.integer "duration"
@@ -24,6 +25,7 @@ ActiveRecord::Schema.define(version: 2020_09_09_143905) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["employee_id"], name: "index_appointments_on_employee_id"
     t.index ["order_id"], name: "index_appointments_on_order_id"
+    t.index ["user_id"], name: "index_appointments_on_user_id"
   end
 
   create_table "cart_items", force: :cascade do |t|
