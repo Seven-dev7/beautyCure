@@ -36,4 +36,11 @@ FactoryBot.define do
         association :cart
         association :product
     end
+    factory :appointment do
+        association :order
+        association :user
+        association :employee
+        start {Time.now}
+        duration { (1..60).to_a.sample}
+    end
 end
