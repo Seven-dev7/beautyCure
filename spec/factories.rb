@@ -21,4 +21,8 @@ FactoryBot.define do
         end_time {Time.now + 3600}
         association :employee
     end
+    factory :order do
+        total_price { (20..352).to_a.sample }
+        association :user
+    end
 end
