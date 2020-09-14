@@ -1,6 +1,20 @@
 require 'ffaker'
 
 FactoryBot.define do
+  factory :cart_service do
+    
+  end
+
+  factory :cart_product do
+    
+  end
+
+
+    factory :order_product do
+        association :order
+        association :product
+    end
+
     factory :order_service do
         association :order
         association :service
@@ -36,10 +50,7 @@ FactoryBot.define do
         total_price { (20..352).to_a.sample }
         association :user
     end
-    factory :order_item do
-        association :order
-        association :product
-    end
+    
     factory :cart do
         association :user
     end
