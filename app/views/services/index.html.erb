@@ -1,2 +1,5 @@
-<h1>Services#index</h1>
-<p>Find me in app/views/services/index.html.erb</p>
+<%= current_user %>
+<% @services.each do |service| %>
+    <%= service.title%>
+    <%= link_to 'Voir plus', service_path(service.id) %><br>
+<%end%>
