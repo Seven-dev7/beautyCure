@@ -1,6 +1,17 @@
 require 'ffaker'
 
 FactoryBot.define do
+    factory :order_service do
+        association :order
+        association :service
+    end
+
+    factory :service do
+        title { "MyString" }
+        description { "MyText" }
+        price { 1 }
+    end
+
     
     factory :user do
         email { FFaker::Internet.email }
