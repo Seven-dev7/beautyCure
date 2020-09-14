@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  resources :services, only: [:show, :index]
+  resources :products, only: [:show, :index]
+  resources :orders, only: [:show, :index]
   devise_for :users
   root 'landing_page#landing'
   get 'about', to: 'landing_page#about'
