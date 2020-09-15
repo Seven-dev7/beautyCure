@@ -1,5 +1,8 @@
-<%= current_user %>
-<% @services.each do |service| %>
-    <%= service.title%>
-    <%= link_to 'Voir plus', service_path(service.id) %><br>
-<%end%>
+<h1>Nos Services</h1>
+
+<div>
+    <% @services.each do |service| %>
+        <%= service.title%>
+        <%= link_to 'Voir plus', service_path(service.id) %><br>
+    <%end%>
+</div>
