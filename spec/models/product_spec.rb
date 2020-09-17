@@ -8,6 +8,8 @@ RSpec.describe Product, type: :model do
     end
 
     describe 'associations' do
-      it { should have_many(:cart_items) }
+      it { should have_many(:cart_products) }
+      it { should have_many(:order_products) }
     end
 end
+
