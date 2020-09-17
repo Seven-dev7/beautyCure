@@ -36,9 +36,28 @@ def create_products
 end
 
 def create_services
-    %w(yeux jambes pieds mains).each do |service|
-        Service.create!( title: "Beauté des #{service}", description: "Mise en beauté des #{service}" , price: 75)
-    end
+    Service.create!( title: "Vernis", description: "Pose de vernis simple" , price: 2000, duration: 15)
+    Service.create!( title: "Vernis", description: "Pose de vernis permanent" , price: 5000, duration: 15)
+    Service.create!( title: "Gel", description: "Pose de gel simple" , price: 10000, duration: 15)
+    Service.create!( title: "Gel", description: "Pose de gel permanent" , price: 15000, duration: 15)
+    Service.create!( title: "Résine & Vernis", description: "Pose de résine accompagné d'un vernis simple" , price: 12000, duration: 15)
+    Service.create!( title: "Résine & Vernis", description: "Pose de résine accompagné d'un vernis permanent" , price: 15000, duration: 15)
+    Service.create!( title: "Remplissage Résine Simple", description: "Remplissage à la Résine et pose d'un vernis simple" , price: 5000, duration: 15)
+    Service.create!( title: "Remplissage Résine Permanent", description: "Remplissage à la Résine et pose d'un vernis permanent" , price: 6500, duration: 15)
+    Service.create!( title: "Remplissage Gel simple", description: "Remplissage au Gel simple" , price: 5000, duration: 15)
+    Service.create!( title: "Remplissage Gel permanent", description: "Remplissage au Gel permanent" , price: 5000, duration: 15)
+    Service.create!( title: "Vernis Pieds", description: "Pose de vernis simple" , price: 5000, duration: 15)
+    Service.create!( title: "Pédicure simple", description: "Soins de pédicure accompagné de la pose d'un vernis simple" , price: 10000, duration: 15)
+    Service.create!( title: "Pédicure permanente", description: "Soins de pédicure accompagné de la pose d'un vernis permanent" , price: 13000, duration: 15)
+    Service.create!( title: "Pédicure Royale", description: "Soins de pédicure complet" , price: 13000, duration: 15)
+    Service.create!( title: "Epilation", description: "Epilation des aisselles" , price: 6000, duration: 15)
+    Service.create!( title: "Epilation + Soins", description: "Epilation des aisselles accompagné d'un soin au miel" , price: 7000, duration: 15)
+    Service.create!( title: "Epilation Maillot", description: "Epilation du maillot simple" , price: 6500, duration: 15)
+    Service.create!( title: "Epilation Maillot +", description: "Epilation du maillot intégrale" , price: 15000, duration: 15)
+    Service.create!( title: "Epilation bas du corps", description: "Epilation des jambes" , price: 10000, duration: 15)
+    Service.create!( title: "Epilation bas du corps 1/2", description: "Epilation des jambes à moitié" , price: 7000, duration: 15)
+    Service.create!( title: "Gommage", description: "Gommage complet du corps" , price: 20000, duration: 15)
+    Service.create!( title: "Massage 1h", description: "Massage du corps à la pierre chaude" , price: 25000, duration: 60)
 end
 
 def reset_seed
