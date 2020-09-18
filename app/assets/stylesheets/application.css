@@ -22,7 +22,16 @@
     width: 100px;
 }
 
-/* Css Services Spec */
+/* Css Services Items */
+.h1-service {
+    text-align: center;
+    margin-bottom: 5%;
+}
+.h3-service {
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
 
 .card-service {
     display: flex;
@@ -44,4 +53,46 @@
 }
 .service-style:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.service-style-show {
+    border: solid;
+    border-color: black;
+    width: 500px;
+    height: 500px;
+    margin-left: 34%;
+    margin-right: 8%;
+    text-align: center;
+}
+.card-service-show {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+}
+
+.price {
+    color: black;
+    font-size: 22px;
+}
+
+.card-service-show button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.card button:hover {
+    opacity: 0.7;
+}
+
+.img-service {
+    width: 100%;
 }
