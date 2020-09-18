@@ -22,4 +22,52 @@
     width: 100px;
 }
 
+/* Css Services Spec */
+
+.card-service {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.service-hands {
+    border: solid grey;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    height: 150px;
+    text-align: center;    
+}
+
+.service-feet {
+    border: solid blue;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    height: 150px; 
+}
+
+.service-body {
+    border: solid blueviolet;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    height: 150px;
+}
+
+.service-eyes {
+    border: solid red;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    height: 150px;
+}
+
+.service-faces {
+    border: solid palegreen;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    height: 160px;
+}
 

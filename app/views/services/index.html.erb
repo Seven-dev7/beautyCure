@@ -1,46 +1,57 @@
 <h1>Nos Services</h1>
 
-<div>  
+
+<div class="card-service">
     <% b_hand = @services[0..9] %>
     <% b_hand.each do |service| %>
-        <%= service.title%><br>
-        <%= link_to 'Voir plus', service_path(service.id) %><br>
+        <div class="service-hands">
+            <%= service.title%>
+            <%= link_to 'Voir plus', service_path(service.id) %>
+        </div>
     <% end %>
 </div>
 <hr>
 <hr>
-<div>  
+<div class="card-service">  
     <% b_foot = @services[10..13] %>
     <% b_foot.each do |service| %>
-        <%= service.title%><br>
-        <%= link_to 'Voir plus', service_path(service.id) %><br>
+        <div class="service-feet">
+            <%= service.title%><br>
+            <%= link_to 'Voir plus', service_path(service.id) %>
+        </div>
     <% end %>
 </div>
 <hr>
 <hr>
-<div>  
+<div class="card-service">  
     <% b_body = @services[14..21] %>
     <% b_body.each do |service| %>
-        <%= service.title%><br>
-        <%= link_to 'Voir plus', service_path(service.id) %><br>
+        <div class="service-body">
+            <%= service.title%><br>
+            <%= link_to 'Voir plus', service_path(service.id) %>
+        </div>
     <% end %>
 </div>
 <hr>
 <hr>
-<div>  
+<div class="card-service">  
     <% b_eyes = @services[21..32] %>
     <% b_eyes.each do |service| %>
-        <%= service.title%><br>
-        <%= link_to 'Voir plus', service_path(service.id) %><br>
+        <div class="service-eyes"> 
+            <%= service.title%><br>
+            <%= link_to 'Voir plus', service_path(service.id) %>
+        </div>
     <% end %>
 </div>
 <hr>
 <hr>
-<div>  
+<div class="card-service">  
     <% b_face = @services[32..43] %>
     <% b_face.each do |service| %>
-        <%= service.title%><br>
-        <%= link_to 'Voir plus', service_path(service.id) %><br>
+        <div class="service-faces"> 
+            <%= service.title%><br>
+            <%= link_to 'Voir plus', service_path(service.id) %>
+        </div>
     <% end %>
 </div>
 
