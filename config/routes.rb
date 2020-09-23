@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
 
-  resources :cart_services, only: [:show, :index, :create, :new]
   resources :services, only: [:show, :index]
   resources :products, only: [:show, :index]
   resources :orders, only: [:show, :index]
+  resources :carts, only: [:show] do
+    post :add_service
+  end
+  
   devise_for :users
   root 'landing_page#landing'
   get 'about', to: 'landing_page#about'

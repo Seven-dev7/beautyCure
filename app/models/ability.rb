@@ -3,8 +3,9 @@ class Ability
 
   def initialize(user)
       user ||= User.new # guest user (not logged in)
-          can :manage, :all
-
+      if user
+        can :manage, :all
+      end
     # The first argument to `can` is the action you are giving the user
     # permission to do.
     # If you pass :manage it will apply to every action. Other common actions

@@ -1,0 +1,8 @@
+<p>Panier</p>
+
+<% @cart_services.each do |cart_service| %>
+    <%= cart_service.service.title %>
+    <%= cart_service.service.description %>
+    <%= cart_service.service.price %>
+    <%= cart_service.service.duration %>
+<%end%>

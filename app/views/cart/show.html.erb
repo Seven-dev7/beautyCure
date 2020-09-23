@@ -1,8 +1,0 @@
-<p id="notice"><%= notice %></p>
-<h2>Panier</h2>
-<ul>
-    <% @cart.cart_services.each do |item| %>
-        <li><%= item.service.title %></li>
-    <% end %>
-</ul>
-<p><%= link_to "Retour aux produits", services_path %></p>
