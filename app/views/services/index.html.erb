@@ -7,6 +7,7 @@
         <div class="service-style">
             <%= service.title%>
             <%= link_to 'Voir plus', service_path(service.id) %>
+            <%= button_to 'Ajouter au Panier', cart_services_path(service_id: service), class: "btn btn-primary"%>
         </div>
     <% end %>
 </div>
@@ -18,6 +19,7 @@
         <div class="service-style">
             <%= service.title%><br>
             <%= link_to 'Voir plus', service_path(service.id) %>
+            <%= button_to 'Ajouter au Panier', cart_services_path(service_id: service), class: "btn btn-primary"%>
         </div>
     <% end %>
 </div>
@@ -29,6 +31,7 @@
         <div class="service-style">
             <%= service.title%><br>
             <%= link_to 'Voir plus', service_path(service.id) %>
+            <%= button_to 'Ajouter au Panier', cart_services_path(service_id: service), class: "btn btn-primary"%>
         </div>
     <% end %>
 </div>
@@ -40,6 +43,7 @@
         <div class="service-style"> 
             <%= service.title%><br>
             <%= link_to 'Voir plus', service_path(service.id) %>
+            <%= button_to 'Ajouter au Panier', cart_services_path(service_id: service), class: "btn btn-primary"%>
         </div>
     <% end %>
 </div>
@@ -51,6 +55,7 @@
         <div class="service-style"> 
             <%= service.title%><br>
             <%= link_to 'Voir plus', service_path(service.id) %>
+            <%= button_to 'Ajouter au Panier', cart_services_path(service_id: service), class: "btn btn-primary"%>
         </div>
     <% end %>
 </div>
