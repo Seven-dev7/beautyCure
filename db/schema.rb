@@ -89,6 +89,7 @@ ActiveRecord::Schema.define(version: 2020_09_14_142427) do
   create_table "products", force: :cascade do |t|
     t.string "title"
     t.text "description"
+    t.string "category"
     t.integer "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -97,6 +98,8 @@ ActiveRecord::Schema.define(version: 2020_09_14_142427) do
   create_table "services", force: :cascade do |t|
     t.string "title"
     t.text "description"
+    t.string "category"
+    t.integer "duration"
     t.integer "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

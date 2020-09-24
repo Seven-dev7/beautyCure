@@ -1,0 +1,56 @@
+<h1 class="h1-service">Nos Services</h1>
+
+    <h3 class="h3-service">Beauté des mains</h3>
+<div class="card-service">
+    <% b_hand = @services[0..9] %>
+    <% b_hand.each do |service| %>
+        <div class="service-style">
+            <%= service.title%>
+            <%= link_to 'Voir plus', service_path(service.id) %>
+        </div>
+    <% end %>
+</div>
+
+    <h3 class="h3-service">Beauté des pieds</h3>
+<div class="card-service">  
+    <% b_foot = @services[10..13] %>
+    <% b_foot.each do |service| %>
+        <div class="service-style">
+            <%= service.title%><br>
+            <%= link_to 'Voir plus', service_path(service.id) %>
+        </div>
+    <% end %>
+</div>
+
+    <h3 class="h3-service">Beauté du corps</h3>
+<div class="card-service">  
+    <% b_body = @services[14..21] %>
+    <% b_body.each do |service| %>
+        <div class="service-style">
+            <%= service.title%><br>
+            <%= link_to 'Voir plus', service_path(service.id) %>
+        </div>
+    <% end %>
+</div>
+
+    <h3 class="h3-service">Beauté des yeux</h3>
+<div class="card-service">  
+    <% b_eyes = @services[21..32] %>
+    <% b_eyes.each do |service| %>
+        <div class="service-style"> 
+            <%= service.title%><br>
+            <%= link_to 'Voir plus', service_path(service.id) %>
+        </div>
+    <% end %>
+</div>
+
+    <h3 class="h3-service">Beauté du visage</h3>
+<div class="card-service">  
+    <% b_face = @services[32..43] %>
+    <% b_face.each do |service| %>
+        <div class="service-style"> 
+            <%= service.title%><br>
+            <%= link_to 'Voir plus', service_path(service.id) %>
+        </div>
+    <% end %>
+</div>

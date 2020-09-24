@@ -1,13 +1,16 @@
 require 'ffaker'
 
 FactoryBot.define do
-  factory :cart_service do
-    
-  end
 
-  factory :cart_product do
-    
-  end
+    factory :cart_service do
+        association :cart
+        association :service
+    end
+
+    factory :cart_product do
+        association :cart
+        association :product
+    end
 
 
     factory :order_product do
@@ -54,6 +57,7 @@ FactoryBot.define do
     factory :cart do
         association :user
     end
+    
     factory :cart_item do
         association :cart
         association :product
