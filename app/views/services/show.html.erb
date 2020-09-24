@@ -1,18 +1,7 @@
-<!--<h1 class="h1-service"><%= @service.title %></h1>
-
-
-<div class="service-style-show">
-    <p>Description : <%= @service.description %> </p>
-    <p>Duréé du soin :  <%= @service.duration %> min </p>
-    <p>Prix : <%= @service.price %> € </p>
-</div>
--->
-
 <div class="card-service-show">
     <%= image_tag "bc-logo-blue.jpg", class: "img-service" %>
     <h1 class="h1-service"><%= @service.title %></h1>
     <p class="price"><%= @service.price %> FCFA</p>
     <p><%= @service.description %> </p>
     <%= button_to 'Ajouter au Panier', cart_add_service_path(cart_id: current_user.cart.id, service_id: @service.id), class: "btn btn-primary"%>
-
 </div> 
