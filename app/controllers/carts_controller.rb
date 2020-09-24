@@ -1,7 +1,11 @@
 class CartsController < ApplicationController
-  load_and_authorize_resource param_method: :params_cart
+  #before_action :cart_params, only: [:show]
+  load_and_authorize_resource param_method: :cart_params
+
   def show
-    @cart_services = Cart.find(params[:id]).cart_services
+    #@cart_services = Cart.find(params[:id]).cart_services
+    @cart_services = @cart.cart_services
+    #Cart.find(params[:id]).cart_services
   end
 
   def add_service
@@ -9,12 +13,17 @@ class CartsController < ApplicationController
     p 'XXX' *20
     p 'XXX' *20
     p params.inspect
-    @cart_service = CartService.create!(cart_id: params[:cart_id], service_id: 1)
+    cart_s = CartService.new(cart_id: params[:cart_id])
+    p cart_s
+    p 'XXX' *20
+    p 'XXX' *20
+    @cart_service = CartService.create!(cart_id: params[:cart_id], service_id: params[:service_id])
+    redirect_to cart_path(current_user.cart.id)
   end
 
   private
   
-  def params_cart
-    params.require(:cart).permit(:service_id, :cart_id, :id)
+  def cart_params
+    params.require(:cart).permit(:id, :cart_id, :service_id)
   end
 end

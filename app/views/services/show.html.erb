@@ -13,6 +13,6 @@
     <h1 class="h1-service"><%= @service.title %></h1>
     <p class="price"><%= @service.price %> FCFA</p>
     <p><%= @service.description %> </p>
-    <%= button_to 'Ajouter au Panier', cart_add_service_path, params: { cart_id: {service_id: @service.id} }, class: "btn btn-primary"%>
+    <%= button_to 'Ajouter au Panier', cart_add_service_path(cart_id: current_user.cart.id, service_id: @service.id), class: "btn btn-primary"%>
 
 </div> 
