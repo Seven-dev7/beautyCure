@@ -6,7 +6,7 @@
             <%= cart_service.service.description %>
             <%= cart_service.service.price %>
             <%= cart_service.service.duration %>
-            <%= link_to 'Supprimer', cart_delete_cart_path(@cart.id), method: :delete, class: "btn btn-primary"%>
+            <%= link_to 'Supprimer', cart_delete_cart_path(cart_service.id), method: :delete, class: "btn btn-primary"%>
         </div>
     <%end%>
 </div>
