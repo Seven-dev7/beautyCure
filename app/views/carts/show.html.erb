@@ -1,12 +1,31 @@
-<p>Panier</p>
-<div class="card-service-show">
+<h1 class="h1-cart-service">Panier</h1>
+
+<div class="cart-style">
     <% @cart_services.each do |cart_service| %><br>
-        <div>
-            <%= cart_service.service.title %>
-            <%= cart_service.service.description %>
-            <%= cart_service.service.price %>
-            <%= cart_service.service.duration %>
-            <%= link_to 'Supprimer', cart_delete_cart_path(cart_service.id), method: :delete, class: "btn btn-primary"%>
+        <div class="card-cart-style">
+            <!-- <div><%= cart_service.service.title %></div> -->
+            <div><%= cart_service.service.description %></div>
+            <div><%= cart_service.service.price %></div>
+            <div><%= cart_service.service.duration %></div>
+            <div><%= link_to 'Supprimer', cart_delete_cart_path(cart_service.id), method: :delete, class: "btn btn-primary button-cart"%></div>
         </div>
     <%end%>
+    <div class='total-price-cart'>
+            Prix-total : <% @cart_services.each do |cs| %>
+                            <% cs.service.price %>
+                            <% @array_price << cs.service.price%>
+                        <%end%>
+                            <%= @array_price.sum%> FCA
+    </div>
+    <div class='total-duration-cart'>
+            Durée totale : <% @cart_services.each do |cs| %>
+                            <% cs.service.duration %>
+                            <% @array_duration << cs.service.duration%>
+                        <%end%>
+                            <%= @array_duration.sum%> minutes
+    </div>
+</div>
+
+<div class='valid-buuton'>
+    
 </div>

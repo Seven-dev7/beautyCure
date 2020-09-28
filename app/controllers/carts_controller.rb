@@ -4,6 +4,8 @@ class CartsController < ApplicationController
 
   def show
     @cart_services = @cart.cart_services
+    @array_price = []
+    @array_duration = []
   end
 
   def add_service
