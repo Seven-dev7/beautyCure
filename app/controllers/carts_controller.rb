@@ -14,16 +14,7 @@ class CartsController < ApplicationController
   end
 
   def delete_cart
-    p 'XXXXXXXXXXX' *20
-    p 'XXXXXXXXXXX' *20
-    p params.inspect
     @cart_service = CartService.find(params[:cart_id])
-    p 'XXXXXXXXXXX' *20
-    p 'XXXXXXXXXXX' *20
-    p 'XXXXXXXXXXX' *20
-    p @cart_service.inspect
-    p 'XXXXXXXXXXX' *20
-    p 'XXXXXXXXXXX' *20
     @cart_service.destroy
     redirect_to cart_path(current_user.cart.id)
   end
