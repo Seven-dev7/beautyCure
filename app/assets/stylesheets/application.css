@@ -14,7 +14,6 @@
  *= require_self
  *= require bootstrap/css/bootstrap.min
  *= require business-casual.min
- *= require datetime_picker_input 
  *= require simple_calendar
  */
 
