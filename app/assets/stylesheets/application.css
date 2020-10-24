@@ -96,3 +96,42 @@
 .img-service {
     width: 100%;
 }
+
+
+/* Css card cart style show */
+
+.h1-cart-service {
+    text-align: center;
+}
+
+.cart-style {
+    border: solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: auto;
+    max-width: 600px;
+    height: auto;
+    max-height: 250px;
+    margin: 20px auto;
+    padding: 15px;
+}
+.card-cart-style {
+    border: solid green;
+    margin-right: 10px;
+}
+
+.button-cart {
+    justify-content: right;
+}
+
+.total-price-cart {
+    margin: 10px;
+}
+.total-duration-cart {
+    margin: 10px;
+}
+
+.valid-buton {
+    background-color: blueviolet;
+}
