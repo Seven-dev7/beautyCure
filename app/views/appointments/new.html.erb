@@ -1,0 +1,10 @@
+<h1>    New appointement </h1>
+<%= simple_form_for @appointement do |f| %>
+    <%= f.association :user, :as => :hidden, :input_html => { :value => current_user.id } %>
+    <%= f.association :employee %>
+    <%= f.input :when, as: :date_time_picker%>
+    <%= f.input :duration %>
+    <%= f.input :price %>
+    <%= f.button :submit %>
+<% end %>
+

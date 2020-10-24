@@ -19,6 +19,11 @@ class CartsController < ApplicationController
     redirect_to cart_path(current_user.cart.id)
   end
 
+  def lock_cart
+    @cart_service = CartService.find(params[:cart_id])
+    @appointment = Appointment.new
+  end
+
   private
   
   def cart_params

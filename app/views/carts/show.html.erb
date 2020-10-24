@@ -24,8 +24,8 @@
                         <%end%>
                             <%= @array_duration.sum%> minutes
     </div>
-    <div class='btn valid-buton'>
-        <%= button_to 'Reservation' %>
+    <div>
+        <%= link_to 'Reservation', new_appointment_path(@appointment, @cart_services), method: :lock_cart, class: 'btn valid-button' %>
     </div>
 </div>
 
