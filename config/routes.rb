@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     post :add_service
     delete :delete_cart_item
   end
+  resources :appointments, only: [:show]
   
   devise_for :users
   root 'landing_page#landing'

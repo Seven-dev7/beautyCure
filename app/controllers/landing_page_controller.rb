@@ -17,6 +17,7 @@ class LandingPageController < ApplicationController
     end
 
     def reservation
-        @cart_service = 
+
     end
+
 end
