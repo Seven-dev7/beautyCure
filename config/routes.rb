@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :orders, only: [:show, :index]
   resources :carts, only: [:show] do
     post :add_service
-    get :delete_cart
+    delete :delete_cart_item
   end
   
   devise_for :users

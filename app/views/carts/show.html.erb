@@ -7,7 +7,7 @@
             <div><%= cart_service.service.description %></div>
             <div><%= cart_service.service.price %></div>
             <div><%= cart_service.service.duration %></div>
-            <div><%= link_to 'Supprimer', cart_delete_cart_path(cart_service.id), method: :delete, class: "btn btn-primary button-cart"%></div>
+            <div><%= button_to 'Supprimer', cart_delete_cart_item_path(cart_service.id), method: :delete, class: "btn btn-primary button-cart"%></div>
         </div>
     <%end%>
     <div class='total-price-cart'>
@@ -24,8 +24,8 @@
                         <%end%>
                             <%= @array_duration.sum%> minutes
     </div>
+    <div class='btn valid-buton'>
+        <%= button_to 'Reservation' %>
+    </div>
 </div>
 
-<div class='valid-buuton'>
-    
-</div>

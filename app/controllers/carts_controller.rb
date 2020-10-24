@@ -13,7 +13,7 @@ class CartsController < ApplicationController
     redirect_to cart_path(current_user.cart.id)
   end
 
-  def delete_cart
+  def delete_cart_item
     @cart_service = CartService.find(params[:cart_id])
     @cart_service.destroy
     redirect_to cart_path(current_user.cart.id)
