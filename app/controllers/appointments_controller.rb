@@ -7,8 +7,8 @@ class AppointmentsController < ApplicationController
   end
 
   def create
-    @appointment = Appointment.create!(appointment_params)
-    redirect_to appointment_path(current_user.id)
+    appointment = Appointment.create!(appointment_params)
+    redirect_to appointment_path(appointement.id)
   end
 
   def show
@@ -20,6 +20,6 @@ class AppointmentsController < ApplicationController
   private
 
   def appointment_params
-    params.require(:appointment).permit(:id, :user_id, :employee_id, :start, :duration, :price)
+    params.require(:appointment).permit(:id, :user_id, :employee_id, :cart_id, :start, :duration, :price)
   end
 end
