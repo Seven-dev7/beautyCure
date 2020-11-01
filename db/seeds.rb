@@ -12,6 +12,7 @@ def perform
     create_admin
     create_products
     create_services
+    create_employee
 end
 
 def create_user
@@ -82,10 +83,20 @@ def create_services
     Service.create!( title: "Microneedling + Bbglow", description: "Bbglow + Microneedling" , price: 110000, duration: 60)
 end
 
+def create_employee
+    Employee.create!(first_name: "Jack", last_name: "O'neil")
+    Employee.create!(first_name: "Francois", last_name: "Mitterand")
+    Employee.create!(first_name: "Manu", last_name: "Macron")
+    Employee.create!(first_name: "Donald", last_name: "Trump")
+    Employee.create!(first_name: "Jack", last_name: "Lang")
+    Employee.create!(first_name: "John", last_name: "Doe")
+end
+
 def reset_seed
     User.destroy_all
     Product.destroy_all
     Service.destroy_all
+    Employee.destroy_all
     p "All Models DELETED"
 end
 

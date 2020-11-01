@@ -4,6 +4,7 @@ class CreateOrders < ActiveRecord::Migration[6.0]
 
       t.integer :total_price
       t.belongs_to :user
+      t.belongs_to :appointment
       t.timestamps
     end
   end

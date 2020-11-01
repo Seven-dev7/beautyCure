@@ -10,6 +10,7 @@ gem 'sprockets-rails', '~> 3.0', '>= 3.0.4'
 gem 'devise', '~> 4.7', '>= 4.7.2'
 gem 'cancancan', '~> 1.13', '>= 1.13.1'
 
+
 # Forms
 gem 'simple_form', '~> 5.0', '>= 5.0.1'
 #calendar

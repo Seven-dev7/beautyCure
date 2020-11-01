@@ -1,0 +1,7 @@
+<h1>    New appointement </h1>
+<%= simple_form_for @appointement do |f| %>
+    <%= f.association :user, :as => :hidden, :input_html => { :value => current_user.id } %>
+    <%= f.association :employee, label_method: :first_name, value_method: :id, include_blank: false %>
+    <%= f.association :cart, :as => :hidden, :input_html => { :value => current_user.cart.id } %>
+    <%= f.button :submit %>
+<% end %>

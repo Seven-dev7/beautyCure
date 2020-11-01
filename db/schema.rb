@@ -16,15 +16,14 @@ ActiveRecord::Schema.define(version: 2020_09_14_142427) do
   enable_extension "plpgsql"
 
   create_table "appointments", force: :cascade do |t|
-    t.bigint "order_id"
     t.bigint "user_id"
     t.bigint "employee_id"
+    t.bigint "cart_id"
     t.datetime "start"
-    t.integer "duration"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["cart_id"], name: "index_appointments_on_cart_id"
     t.index ["employee_id"], name: "index_appointments_on_employee_id"
-    t.index ["order_id"], name: "index_appointments_on_order_id"
     t.index ["user_id"], name: "index_appointments_on_user_id"
   end
 
@@ -81,8 +80,10 @@ ActiveRecord::Schema.define(version: 2020_09_14_142427) do
   create_table "orders", force: :cascade do |t|
     t.integer "total_price"
     t.bigint "user_id"
+    t.bigint "appointment_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["appointment_id"], name: "index_orders_on_appointment_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 

@@ -24,8 +24,8 @@
                         <%end%>
                             <%= @array_duration.sum%> minutes
     </div>
-    <div class='btn valid-buton'>
-        <%= button_to 'Reservation' %>
+    <div>
+        <%= link_to 'Prendre RDV', new_appointment_path, class: 'btn valid-button' %>
     </div>
 </div>
 

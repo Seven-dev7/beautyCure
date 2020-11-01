@@ -17,6 +17,7 @@ class LandingPageController < ApplicationController
     end
 
     def reservation
-        
+
     end
+
 end
